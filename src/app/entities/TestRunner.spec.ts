@@ -1,19 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
-
-import { Car } from './Car';
-import { Truck } from './Truck';
 import { VehicleFactory } from '../factories/Vehicle.factory';
 import { LicensePlateTracker } from '../data_structures/LicensePlateTracker';
 import { TTracker } from '../data_structures/TransactionTracker';
 
 describe('Project runner test suite', () => {
-  let car;
-  let truck;
-
-  beforeEach(async(()=>{
-    car = new Car('IAMCARS');
-    truck = new Truck('IRTRUCK');
-  }))
 
   //test: create 10 vehicles. One is a duplicate truck and thus receives discount.
   it('should generate 10 vehicles ', async(() => {
@@ -89,8 +79,4 @@ describe('Project runner test suite', () => {
     expect(tTracker.getCurrentQueue()).toBe(0);
   }));
 
-  //test to see if the license plate is of type string
-  it('should have a string for a license plate', async(() => {
-    expect(typeof(car.getLicensePlate())).toEqual('string');
-  }));
 });
