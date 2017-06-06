@@ -1,0 +1,38 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1 class="title">
+    Welcome to {{title}}
+  </h1>
+  Problem not restated for confidentiality.
+</div>
+<legend>1)Add a new Vehicle</legend>
+<div>a)Add license plate number(has to be 7 characters/numbers long):</div>
+<div><input type="text" id="lp-text"  [(ngModel)]="lpNumber"><span class="glyphicon glyphicon-asterisk" style="color:red" aria-hidden="true"></span></div>
+<br>
+<div>
+  <div>b)Select the type of vehicle you would like to run through the car wash</div>
+  <button class="btn btn-primary" [ngClass]="{disabled:(lpNumber && lpNumber.length == 7)?null:true}" (click)="generateVehicle('car')">Car</button>
+  <button class="btn btn-primary" [ngClass]="{disabled: (lpNumber && lpNumber.length == 7)?null:true}" (click)="generateVehicle('truck')">Truck</button>
+</div>
+<legend>2)View transaction history</legend>
+*-The table is preloaded, on page load, with 10 random vehicles
+<div>Current transaction size {{transactionCount}}</div>
+<div><strong>Adjust transaction size by changing the number below</strong></div>
+<input type="number" [value]="transactionCount" (keyup)="updateTransactionSize($event)">
+<table>
+  <thead>
+    <tr>
+      <th>License Plate #</th>
+      <th>Cost</th>
+      <th>Date of transaction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td>{{row._licensePlate}}</td>
+      <td>{{row._cost}}</td>
+      <td>{{row.date | date:'medium'}}</td>
+    </tr>
+  </tbody>
+</table>
+ 
