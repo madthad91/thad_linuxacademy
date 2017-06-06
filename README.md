@@ -16,7 +16,7 @@ Run jasmine/karma tests: ng test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
-Visual example [here](http://thad_linuxacademy.surge.sh/)
+My Hosted example [here](http://thad_linuxacademy.surge.sh/)
 
 The visual example is nice if you would like to adjust the transaction cache and see the effects real-time
 
