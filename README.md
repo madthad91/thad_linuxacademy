@@ -1,5 +1,19 @@
 # Linuxacademy
 
+# Project Setup(in this order) and run tests
+
+Disclaimer: @src/app/entities/TestRunner.spec.ts is the largest and most practical to the problem from a testing perspective. The other test(.spec) files are fair examples and are mentioned earlier in this readme.
+
+Get Angular Cli: npm install -g @angular/cli
+
+Install Local Packages: npm install
+
+Run local server: ng serve
+
+Run jasmine/karma tests: ng test
+
+# Background
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
 Visual example [here](http://thad_linuxacademy.surge.sh/)
@@ -37,15 +51,3 @@ for(0 - N)
 ## What is demo service? 
 
 Just a refactored edition of my created 10 vehicles test. It was created to program the mini visual site without cluttering the component.
-
-#Tests
-
-## Code for tests
-
-@src/app/entities/TestRunner.spec.ts is the largest and most practical to the problem from a testing perspective. The other test(.spec) files are fair examples and are mentioned earlier in this readme.
-
-## Running unit tests
-
-Run local server with ng serve 
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
